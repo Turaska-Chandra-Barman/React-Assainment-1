@@ -11,7 +11,7 @@ export const CardItem = ({ cardlist,chatMessage }) => {
 
 
   return (
-    <Container className=' mb-32 mt-72   sm:mt-96 lg:mt-64  '>
+    <Container className=' mb-32 mt-23     sm:mt-10  '>
       <div className=" grid grid-cols-[repeat(auto-fill,minmax(306px,1fr))] overflow-hidden gap-x-6 gap-y-8 justify-items-center">
         {cardlist.map(({ id, img, logo, logoName, name, prices, text }) => {
           return (

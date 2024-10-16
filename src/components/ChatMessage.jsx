@@ -18,7 +18,7 @@ export default function ChatMessage({ chatMessage,getHidden}) {
                   i === 0 || i === 3
                     ? 'place-self-end bg-chat-bg text-white '
                     : 'place-self-start bg-inherit text-secondary'
-                } flex items-center justify-center max-w-[213px] text-[8px] sm:text-xs font-normal px-[13px] h-[40px] sm:h-[57px] border border-headerText/20 rounded-md leading-normal`}
+                } flex items-center justify-center max-w-[213px] text-[10px] sm:text-xs font-normal px-[13px] h-[40px] sm:h-[57px] border border-headerText/20 rounded-md leading-normal`}
               >
                 <p>{item.message}</p>
               </div>

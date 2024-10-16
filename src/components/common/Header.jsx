@@ -1,10 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { Fillter } from '../common/Search';
+import { Search } from '../common/Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 
 export const Header = ({ navlist }) => {
+
+  const [navGet,setNav] =useState(false)
   return (
     <>
       <header className="w-full bg-border-bg mx-auto py-1 fixed top-0 z-50">
@@ -14,7 +17,7 @@ export const Header = ({ navlist }) => {
             src="img/Logo-header.png"
             alt="sdfs"
           />
-          <ul className="  hidden xl:flex  gap-9 items-center justify-center  ">
+          <ul className={` ${navGet ?'flex':'hidden'}  xl:flex absolute xl:static  w-[250px] xl:w-auto xl:h-auto top-20 sm:top-24 h-[500px] bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit right-0 flex  rounded-t-md rounded-l-md flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
             {navlist.map(({ id, name }) => {
               return (
                 <>
@@ -24,7 +27,7 @@ export const Header = ({ navlist }) => {
                   ${
                     name === 'Dashboard'
                       ? 'text-primary font-bold  '
-                      : 'font-normal text-headerText relative'
+                      : ' text-primary font-bold xl:font-normal xl:text-headerText relative'
                   } text-sm `}
                   >
                     <NavLink to={'/'}>{name}</NavLink>
@@ -37,7 +40,7 @@ export const Header = ({ navlist }) => {
           <div className=" flex items-center justify-center gap-1 sm:gap-2">
             <div className=" size-8 sm:size-10 bg-white rounded-full flex items-center justify-center relative">
               <img src="img/notification.png" alt="notification" />
-              <div className="size-2.5 border border-white bg-accent-secondary rounded-full absolute top-0 right-0"></div>
+              <div className="size-2.5 border border-white bg-accent-secondary  rounded-full absolute top-0 right-0"></div>
             </div>
             <div className="flex items-center justify-center gap-1 sm:gap-2">
               <img
@@ -55,13 +58,14 @@ export const Header = ({ navlist }) => {
               </div>
             </div>
           </div>
-          <div className="block lg:hidden">
-          <FontAwesomeIcon icon={faBars} />
+          <div className="block xl:hidden">
+          <FontAwesomeIcon onClick={() => setNav(!navGet)} icon={faBars} />
           </div>
         </nav>
-        <div className="border border-black/5 mt-3 sm:mt-7"></div>
-        {<Fillter />}
+        <div className="border border-black/5 mt-3 sm:mt-7 mb-9"></div>
+     
       </header>
+      {<Search />}
     </>
   );
 };

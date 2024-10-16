@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from './Button'
 
-export const Fillter = () => {
+export const Search = () => {
 
 
 
@@ -9,7 +9,8 @@ export const Fillter = () => {
   return (
     // <div>fillter</div>
 
-        <div className='max-w-headerWidth mx-auto px-2.5 mt-5 sm:mt-8 mb-4 sm:mb-5'>
+    <div className='w-full bg-border-bg '>
+        <div className='max-w-headerWidth mx-auto px-2.5 py-10 mt-[110px] xl:mt-[100px]  mb-4 sm:mb-5'>
            <div className='flex items-center justify-between gap-2'>
             <div className='place-self-start sm:place-self-auto'>
               <small className='text-xs text-secondary font-normal'>Wellcome back</small>
@@ -30,6 +31,7 @@ export const Fillter = () => {
                 </Button>}
             </div>
            </div>
+        </div>
         </div>
 
   )
