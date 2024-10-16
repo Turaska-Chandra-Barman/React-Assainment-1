@@ -20,7 +20,7 @@ export default {
 
       maxWidth: {
         headerWidth: '1290px',
-        primaryConWidth: '1500px',
+        primaryConWidth: '1320px',
         secondaryConWidth: '770px',
       },
       letterSpacing: {

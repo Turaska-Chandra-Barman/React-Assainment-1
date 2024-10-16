@@ -1,8 +1,8 @@
-import { Link, NavLink } from 'react-router-dom';
-import { Fillter } from '../Search';
+import {  NavLink } from 'react-router-dom';
+import { Fillter } from '../common/Search';
 
 export const Header = ({ navlist }) => {
-  console.log(navlist);
+
 
   return (
     <>

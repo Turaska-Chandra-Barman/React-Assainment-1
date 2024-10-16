@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Header } from './components/common/Header'
 import Data from './lib/Json.js'
+import { CardItem } from './components/CardItem.jsx'
 
 function App() {
   const [getData, setData] = useState(Data)
@@ -12,6 +11,7 @@ function App() {
   return (
     <>
       <Header navlist={navlist}/>
+      <CardItem cardlist={cardlist}/>
     </>
   )
 }
