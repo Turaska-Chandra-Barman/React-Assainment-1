@@ -9,7 +9,7 @@ export const Fillter = () => {
   return (
     // <div>fillter</div>
 
-        <div className='max-w-headerWidth mx-auto px-2.5 mt-8 mb-4 sm:mb-5'>
+        <div className='max-w-headerWidth mx-auto px-2.5 mt-5 sm:mt-8 mb-4 sm:mb-5'>
            <div className='flex items-center justify-between gap-2'>
             <div className='place-self-start sm:place-self-auto'>
               <small className='text-xs text-secondary font-normal'>Wellcome back</small>

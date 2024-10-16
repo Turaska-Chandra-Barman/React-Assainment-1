@@ -1,4 +1,4 @@
-export default[
+export default [
   {
     navlist: [
       {
@@ -192,6 +192,24 @@ export default[
         id: crypto.randomUUID(),
         img: 'img/inlogo/logo-17.svg',
         name: 'Volcanic Eruption',
+      },
+    ],
+    chatMessage: [
+      {
+        id: crypto.randomUUID(),
+        message: 'Lorem ipsum dolar sit general sac mascho werho',
+      },
+      {
+        id: crypto.randomUUID(),
+        message: 'Lorem ipsum dolar sit general sac mascho werho',
+      },
+      {
+        id: crypto.randomUUID(),
+        message: 'Lorem ipsum dolar sit general sac mascho werho',
+      },
+      {
+        id: crypto.randomUUID(),
+        message: 'Lorem ipsum dolar sit general sac mascho werho',
       },
     ],
   },
