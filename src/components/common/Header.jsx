@@ -30,7 +30,7 @@ export const Header = ({ navlist }) => {
                       : ' text-primary font-bold xl:font-normal xl:text-headerText relative'
                   } text-sm `}
                   >
-                    <NavLink to={'/'}>{name}</NavLink>
+                    <NavLink to={'/' + name}>{name}</NavLink>
                   </li>
                   <span className=" coustom-underline"></span>
                 </>
@@ -65,7 +65,6 @@ export const Header = ({ navlist }) => {
         <div className="border border-black/5 mt-3 sm:mt-7 mb-9"></div>
      
       </header>
-      {<Search />}
     </>
   );
 };

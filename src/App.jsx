@@ -3,6 +3,7 @@ import './App.css';
 import { Header } from './components/common/Header';
 import Data from './lib/Json.js';
 import { CardItem } from './components/CardItem.jsx';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [getData, setData] = useState(Data);
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <Header navlist={navlist} />
-      <CardItem cardlist={cardlist} chatMessage={chatMessage} />
+     <Outlet context={getData}/>
     </>
   );
 }
