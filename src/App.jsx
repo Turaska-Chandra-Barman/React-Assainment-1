@@ -18,6 +18,7 @@ function App() {
   const [getData, setData] = useState(Data);
   const { navlist, cardlist, incidents, newIncidents,  chatMessage } = getData[0];
 
+
   return (
 
     <>
