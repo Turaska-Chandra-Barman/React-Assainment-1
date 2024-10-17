@@ -16,6 +16,8 @@ export default {
         'chat-bg': ' #3F3F46',
         'mainChat-bg': '#F4F4F5',
         'border-bg': '#E4E4E7',
+        'line-accent': '#FB923C',
+        'bg-incident': '#FAFAF5',
       },
       borderColor: {
         'border-bg': '#E4E4E7',

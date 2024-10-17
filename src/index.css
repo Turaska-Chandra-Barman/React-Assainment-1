@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.active{
+    background-color: green;
+    padding: 2px 5px;
+}

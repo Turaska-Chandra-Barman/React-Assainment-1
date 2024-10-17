@@ -4,6 +4,6 @@ import { cn } from '../../lib/tailwindMarge'
 
 export const Button = ({className,children,onclick}) => {
   return (
-    <button onClick={onclick} className={cn(' place-self-stretch text-btn-text px-6 py-3 sm:py-4 font-bold bg-accent rounded-md leading-none',className)}>{children}</button>
+    <button onClick={onclick} className={cn('  text-btn-text px-6 py-3 sm:py-4 font-bold bg-accent rounded-lg leading-none',className)}>{children}</button>
   )
 }
