@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from './common/Button'
-import { Link } from 'react-router-dom'
+import { Link, useOutletContext } from 'react-router-dom'
 import { NewIncident } from './NewIncident'
 import { Search } from './common/Search'
 import { Input } from './common/input'
@@ -8,6 +8,10 @@ import { Filter } from './common/Filter'
 import { Container } from './common/container'
 
 export const Location = () => {
+
+
+  const [{location, locationListing}] = useOutletContext();
+ console.log(locationListing)
 
   const array = [
     {
@@ -39,21 +43,21 @@ export const Location = () => {
             <div className='flex items-center gap-3 flex-wrap justify-center'>
               <Input className=' w-[150px] sm:w-auto text-[8px] sm:text-xs'/>
               <Filter className=' w-[150px] sm:w-auto text-[8px] sm:text-xs'/>
-              <Button className='flex items-center justify-center sm:justify-normal max-w-[300px] w-full py-4 px-6 sm:w-auto '>
+              <Button className='flex items-center justify-center sm:justify-normal max-w-[300px] w-full py-2 px-6 sm:w-auto '>
                   <img src="/img/addingButton.png" alt="button" />
                   <h1>New Incident</h1>
               </Button>
             </div>
         </div>
       </Search>
-      {/* <Container className='mt-10'>
-        <div className='grid grid-cols-12 gap-24'>
-          <div className='col-span-7'> 
+      <Container className='mt-10 '>
+        <div className='grid grid-cols-12 xl:gap-24 w-full'>
+          <div className='col-span-12 xl:col-span-7'> 
 
             {
               array.map((item,i) => {
 
-               return <div className='flex items-center gap-4 mb-10 '>
+               return <div key={item.id} className='flex items-center gap-4 mb-10 '>
                   <div className='size-9 rounded-full bg-[#F2F2F3] flex items-center justify-center '>
                   <img  src={item.img} alt="LocationImg" />
                   </div>
@@ -74,26 +78,102 @@ export const Location = () => {
             </div>
             <div className='w-full h-[0.8px] bg-border-bg mb-10 '></div>
 
-            <div>
-              <div className='flex items-center justify-between'>
+            <div className='cardDetails'>
+              <div className='flex items-center justify-between mb-4'>
                 <h1 className='text-primary text-sm font-bold'>Locations</h1>
                 <small className='text-secondary text-sm font-normal'>See all</small>
               </div>
 
+            <div className=' grid grid-cols-[repeat(auto-fill,minmax(224px,1fr))] justify-items-center  '>
 
+               {
+                  location.map(({currency,id,img,name,text}) => {
+
+                 return  <div key={id} className='max-w-[224px] w-full relative'>
+                      <img src={img} alt="locationCardimg" />
+                      <div  className=' absolute top-2 right-4 gap-1 flex items-center p-2 bg-white rounded-full'>
+                        <img src="/img/Locationcardlogo.png" alt="logo" />
+                        <h1 className='text-[10px] font-bold text-primary'>Building</h1>
+                      </div>
+                      <h1 className='text-primary font-bold text-sm mb-2.5 mt-3  leading-none'>{name}</h1>
+                      <p className='text-secondary text-xs font-normal mb-2.5'>{text}</p>
+                      <span className='text-primary font-bold text-sm '>{currency}</span>
+                    </div> 
+              })
+              }
+                 {/* <div className='max-w-[224px] w-full relative'>
+                      <img src="/img/location-img-01.png" alt="" />
+                      <div  className=' absolute top-2 right-4 gap-1 flex items-center p-2 bg-white rounded-full'>
+                        <img src="/img/Locationcardlogo.png" alt="logo" />
+                        <h1 className='text-[10px] font-bold text-primary'>Building</h1>
+                      </div>
+                      <h1 className='text-primary font-bold text-sm mb-2.5 mt-3  leading-none'>Whitechapel Rd.</h1>
+                      <p className='text-secondary text-xs font-normal mb-2.5'>Tulare County,  Los Angles, CA 23415</p>
+                      <span className='text-primary font-bold text-sm '>$1,456,654.00</span>
+                    </div>  */}
+            </div>
+        
+
+            </div>
+            <div className='w-full h-[0.8px] bg-border-bg mb-10  mt-10'></div>
+
+            <div className='secondaryCard'>
+              <div>
+
+                  {
+                    locationListing.map(({headername,headernext,id,img,name,textname,textnumprimary,textnumsecondary,currency},i) => {
+                   return   <>
+                      <div className=' flex items-center justify-between mb-4'>
+                        <h1 className='text-primary text-sm font-bold'>{headername}</h1>
+                        <span className='text-secondary text-sm font-normal'>{headernext}</span>
+                      </div>
+                        <div className='flex items-center w-full h-[108px] bg-border-bg py-4 px-2.5 gap-4 rounded-lg'>
+                          <img className='w-[78px] h-[78px] rounded-lg' src={img} alt="locationimg" />
+                          <div>
+                            <h1 className='text-base text-primary font-bold mb-2 leading-none'>{name}</h1>
+                            <div className='flex items-center gap-2'>
+                              <span className='text-secondary font-normal text-sm'>{textname}</span>
+                              <span className='size-1 rounded-full bg-secondary block'></span>
+                              <span className='text-secondary font-normal text-sm'>{textnumprimary}</span>
+                              <span className='text-secondary font-normal text-sm'>{textnumsecondary}</span>
+                            </div>
+                            <p className='text-primary font-bold text-sm mt-2'>{currency}</p>
+      
+                          </div>
+                        </div>
+                        <div className='flex items-center w-full h-[108px] bg-border-bg py-4 px-2.5 gap-4 rounded-lg mt-4'>
+                          <img className='w-[78px] h-[78px] rounded-lg' src={img} alt="locationimg" />
+                          <div>
+                            <h1 className='text-base text-primary font-bold mb-2 leading-none'>{name}</h1>
+                            <div className='flex items-center gap-2'>
+                              <span className='text-secondary font-normal text-sm'>{textname}</span>
+                              <span className='size-1 rounded-full bg-secondary block'></span>
+                              <span className='text-secondary font-normal text-sm'>{textnumprimary}</span>
+                              <span className='text-secondary font-normal text-sm'>{textnumsecondary}</span>
+                            </div>
+                            <p className='text-primary font-bold text-sm mt-2'>{currency}</p>
+      
+                          </div>
+                        </div>
+                          {i === 0? <div className='w-full h-[0.8px] bg-border-bg mb-10 mt-10 '></div>:''}
+                        </>
+                    })
+                  }
+
+              </div>
             </div>
           </div>
 
 
 
-          <div className='col-span-5'>
+          <div className=' col-span-12 xl:col-span-5'>
             <small className=' mb-5 text-secondary text-sm block'>Incident Map</small>
             <img src="/img/mapimg-02.png" alt="mapImg" />
             <span className='text-secondary text-sm font-normal  mt-5 block'>Start 19.1232, -118.233 &nbsp;
             End 19.3245, -119.2323</span>
           </div>
         </div>
-      </Container> */}
+      </Container>
 
     </>
   )
