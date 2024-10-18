@@ -20,10 +20,10 @@ export const IncidentsDetails = () => {
       </Search>
       <IncidentContainer>
         <div className='mb-10'>
-          <h1 className="text-primary text-2xl font-bold mb-6 text-center">
+          <h1 className="text-primary text-xl sm:text-2xl font-bold mb-6 text-center">
             Which of these best describes the incident?
           </h1>
-          <div className="incident-card grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 justify-items-center">
+          <div className="incident-card grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))]  sm:grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2 justify-items-center">
             {newIncidents.map(({ id, img, name }) => {
               const isActive = getStyle === id;
 
@@ -31,13 +31,13 @@ export const IncidentsDetails = () => {
                 <>
                   <div
                     onClick={(e) => Style(id)}
-                    className={`w-[180px] px-[22px] py-5 bg-bg-incident border rounded-lg ${
+                    className={`w-full sm:w-[180px]   py-5  bg-bg-incident border rounded-lg ${
                       isActive ? 'CardDetails' : ''
                     }`}
                   >
-                    <div className="flex items-center justify-center gap-2 cursor-pointer">
-                      <img src={'/' + img} alt="logo" />
-                      <h1 className="text-secondary text-sm font-normal">
+                    <div className="flex items-center justify-center  gap-1 sm:gap-2 cursor-pointer">
+                      <img className={`w-[15px] ${isActive ?'filter brightness-0 invert':''}  sm:w-auto`} src={'/' + img} alt="logo" />
+                      <h1 className={`${isActive ?'text-white':'text-secondary'} text-xs sm:text-[14px]  font-normal`}>
                         {name}
                       </h1>
                     </div>

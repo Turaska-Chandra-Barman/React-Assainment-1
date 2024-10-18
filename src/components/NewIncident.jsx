@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from './common/Button'
+import { Link } from 'react-router-dom'
 
 export const NewIncident = () => {
     const array = ['Home','Incidents','New Incident']
+
+
+    function Back (){
+        history.back();
+    }
+
   return (
     <>
         <div className='flex items-center  justify-center sm:justify-between gap-3 relative py-3 flex-wrap '>
@@ -19,10 +26,10 @@ export const NewIncident = () => {
                             {
                                 array.map((item,i) => {
                            
-                                   return <>
+                                   return <Fragment key={i}>
                                     <h5 className='text-secondary text-[8px] sm:text-xs font-normal'>{item}</h5>
                                     { i === 2 ? '': <div className='w-1 sm:w-2  border border-secondary/60 '></div>}
-                                    </>
+                                    </Fragment>
                                 })
                             }
                             {/* <h5 className='text-secondary text-xs font-normal'>Home</h5>
@@ -38,11 +45,11 @@ export const NewIncident = () => {
                 <div className='bg-line-accent h-full w-24 rounded-full'></div>
             </div>
            <div className=' flex items-center justify-between gap-2 sm:gap-5'>
-           <Button className='border-2   border-[D4D4D8] px-7 py-2 sm:px-14 sm:py-4  bg-white text-secondary font-bold text-xs'>
+           <Button onclick={Back} className='border-2   border-[D4D4D8] px-7 py-2 sm:px-14 sm:py-4  bg-white text-secondary font-bold text-xs'>
                 Back
             </Button>
             <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
-                Next step
+               <Link to={'Descirbe'}> Next step</Link>
             </Button>
            </div>
         </div>
