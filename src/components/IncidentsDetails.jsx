@@ -13,7 +13,7 @@ export const IncidentsDetails = () => {
   const Style = (id) => {
     setStyle(id);
   };
-
+  
   return (
     <>
       <Search>
@@ -33,7 +33,7 @@ export const IncidentsDetails = () => {
               const isActive = getStyle === id;
 
               return (
-                <>
+                <Fragment key={id}>
                   <div
                     onClick={(e) => Style(id)}
                     className={`w-full sm:w-[180px]   py-5  bg-bg-incident border rounded-lg ${
@@ -47,7 +47,7 @@ export const IncidentsDetails = () => {
                       </h1>
                     </div>
                   </div>
-                </>
+                </Fragment>
               );
             })}
           </div>

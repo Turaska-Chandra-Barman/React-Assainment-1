@@ -44,7 +44,7 @@ export const NewIncident = ({children}) => {
                 <div className='bg-line-accent h-full w-24 rounded-full'></div>
             </div>
            <div className=' flex items-center justify-between gap-2 sm:gap-5'>
-           <Button onclick={Back} className='border-2   border-[D4D4D8] px-7 py-2 sm:px-14 sm:py-4  bg-white text-secondary font-bold text-xs'>
+           <Button onclick={Back} className='border-2 hover:bg-lime-400 transition delay-100 duration-150 ease-in-out  border-[D4D4D8] px-7 py-2 sm:px-14 sm:py-4  bg-white text-secondary font-bold text-xs'>
                 Back
             </Button>
            {children}

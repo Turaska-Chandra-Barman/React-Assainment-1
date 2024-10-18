@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       },
       {
         path:'Incidents',
+        element:<MainIncident/>
+      },
+      {
+        path:'Incidents',
         element:<MainIncident/>,
       },
       {

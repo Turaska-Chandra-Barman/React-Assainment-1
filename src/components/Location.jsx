@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Button } from './common/Button'
 import { Link, useOutletContext } from 'react-router-dom'
 import { NewIncident } from './NewIncident'
@@ -123,7 +123,7 @@ export const Location = () => {
 
                   {
                     locationListing.map(({headername,headernext,id,img,name,textname,textnumprimary,textnumsecondary,currency},i) => {
-                   return   <>
+                   return   <Fragment key={id}>
                       <div className=' flex items-center justify-between mb-4'>
                         <h1 className='text-primary text-sm font-bold'>{headername}</h1>
                         <span className='text-secondary text-sm font-normal'>{headernext}</span>
@@ -157,7 +157,7 @@ export const Location = () => {
                           </div>
                         </div>
                           {i === 0? <div className='w-full h-[0.8px] bg-border-bg mb-10 mt-10 '></div>:''}
-                        </>
+                        </Fragment>
                     })
                   }
 

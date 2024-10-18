@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import { Search } from '../common/Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -13,11 +13,12 @@ export const Header = ({ navlist }) => {
     <>
       <header className="w-full bg-[#F2F2F3] mx-auto py-1 fixed top-0 z-50">
         <nav className="max-w-headerWidth mx-auto px-2.5 mt-5 flex items-center justify-between">
-          <img
+         <Link to='/'>
+         <img
             className="w-[100px] sm:w-auto"
             src="/img/Logo-header.png"
             alt="sdfs"
-          />
+          /></Link>
           <div onClick={() => setNav(false)} className={`${navGet && 'fixed xl:static inset-0 bg-zinc-600/90 xl:bg-inherit flex w-full  h-full  items-center justify-center  '}`}>
           <ul onClick={(e) => e.stopPropagation()} className={` ${navGet ?'flex':'hidden'}  xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
             {navlist.map(({ id, name }) => {

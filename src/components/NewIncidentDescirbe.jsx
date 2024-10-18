@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Search } from './common/Search';
 import { NewIncident } from './NewIncident';
 import { IncidentContainer } from './common/IncidentContainer';
@@ -34,7 +34,7 @@ export const NewIncidentDescirbe = () => {
         <div>
           {array.map((item,i) => {
           
-          return  <>
+          return  <Fragment key={i}>
            <h1 className=" text-xl sm:text-2xl font-bold mb-3">
                 {item.title}
               </h1>
@@ -48,7 +48,7 @@ export const NewIncidentDescirbe = () => {
                     className="text-xs  focus:outline-none focus:border-cyan-300 focus:ring-1 focus:ring-cyan-300 text-secondary font-normal border border-border-bg py-5 px-2.5 w-full rounded-lg bg-[#F2F2F3] mb-6"
                   />: <textarea className='w-full border px-2.5 pt-5 rounded-lg text-xs text-secondary font-normal border-border-bg bg-[#F2F2F3] resize-none' placeholder='Type here' rows={8} name="" id=""  ></textarea>)
              }
-            </>;
+            </Fragment>;
           })}
 
           {/* <h1 className='text-2xl font-bold mb-3'>Let’s give the incident a title?</h1>

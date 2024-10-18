@@ -43,18 +43,18 @@ import { Link, Outlet, useOutletContext } from 'react-router-dom';
             {
                 incidents.map((items,i) => {
 
-                    return <div className={`w-[235px]  flex  `} style={{placeSelf:'stretch'}} key={items.id}>
-                        <div className={`bg-border-bg px-5 py-6 rounded-md `}>
+                    return <div className={`w-[235px]  flex group   `} style={{placeSelf:'stretch'}} key={items.id}>
+                        <div className={`bg-border-bg  hover:bg-gray-400 transition duration-200 delay-100 ease-in-out  px-5 py-6 rounded-md `}>
                             <img className='mb-16' src={'/'+ items.img} alt="inLogo" />
                             <h1 className='text-xl text-primary font-bold mb-5'>{items.que}</h1>
-                            <p className='text-secondary text-xs font-normal'>{items.ans}</p>
+                            <p className='text-secondary group-hover:text-white  text-xs font-normal'>{items.ans}</p>
                         </div>
                     </div> 
                 })
             }
             </div>
         <div className='w-full text-center'>
-        <Button className=' mt-10 sm:mt-20 text-center  '>
+        <Button className='  mt-10 sm:mt-20 text-center w-[139px]  '>
             <Link to='incidentDetails'>Get started</Link>
             </Button>
         </div>
