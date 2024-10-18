@@ -4,6 +4,8 @@ import { ChatButton } from './ChatButton';
 import ChatMessage from './ChatMessage';
 import { Search } from './common/Search';
 import { Button } from './common/Button';
+import { Input } from './common/input';
+import { Filter } from './common/Filter';
 
 export const CardItem = ({ cardlist, chatMessage }) => {
   const [getHidden, setHidden] = useState(false);
@@ -22,19 +24,8 @@ export const CardItem = ({ cardlist, chatMessage }) => {
               </h1>
             </div>
             <div className="flex items-center flex-col lg:flex-row  gap-3">
-              <div className="flex items-center justify-center bg-white py-2.5  sm:py-4  px-1.5 sm:px-2.5 gap-1 text-xs rounded-md ">
-                <img src="img/search.png" alt="search" />
-                <input
-                  className="border-0 outline-none "
-                  type="text"
-                  placeholder="Search  incident"
-                />
-              </div>
-              <div className=" font-normal bg-white py-2.5 place-self-stretch lg:place-self-auto  sm:py-4  px-1.5 sm:px-2.5 text-xs rounded-md text-secondary/80">
-                <select className="appearance-none" name="" id="">
-                  <option value="">Sort By:Date modifed</option>
-                </select>
-              </div>
+              <Input/>
+             <Filter/>
               {<Button>Cypher AI</Button>}
             </div>
           </div>

@@ -32,8 +32,7 @@ export const NewIncident = ({children}) => {
                                     </Fragment>
                                 })
                             }
-                            {/* <h5 className='text-secondary text-xs font-normal'>Home</h5>
-                            <div className='w-4  border border-black'></div> */}
+                     
                         </div>
                         <div>
                             <h1 className='text-primary font-bold text-lg  sm:text-[26px]  mt-1'>New Incident</h1>

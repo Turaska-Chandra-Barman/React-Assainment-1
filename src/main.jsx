@@ -9,6 +9,7 @@ import { Incidents } from './components/Incidents.jsx';
 import { IncidentsDetails } from './components/IncidentsDetails.jsx';
 import { NewIncidentDescirbe } from './components/NewIncidentDescirbe.jsx';
 import { NewIncidentMap } from './components/NewIncidentMap.jsx';
+import { Location } from './components/Location.jsx';
 
 
 
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
     
       {
         path:'Locations',
-        element:<h1>this is a Locations</h1>
+        element:<Location/>
       },
      {
       path:'*',
