@@ -40,7 +40,7 @@ export const NewIncident = ({children}) => {
                     </div>
                 </div>
             </div>
-            <div className=' max-w-[527px] w-full bg-border-bg h-1 sm:h-2 rounded-full absolute xl:static -top-3 left-1/2 -translate-x-1/2  xl:-translate-x-0'>
+            <div className=' max-w-[327px] sm:max-w-[527px] w-full bg-border-bg h-1 sm:h-1.5 rounded-full absolute xl:static -top-3 left-1/2 -translate-x-1/2  xl:-translate-x-0'>
                 <div className='bg-line-accent h-full w-24 rounded-full'></div>
             </div>
            <div className=' flex items-center justify-between gap-2 sm:gap-5'>

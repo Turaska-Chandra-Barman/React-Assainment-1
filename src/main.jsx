@@ -10,6 +10,7 @@ import { IncidentsDetails } from './components/IncidentsDetails.jsx';
 import { NewIncidentDescirbe } from './components/NewIncidentDescirbe.jsx';
 import { NewIncidentMap } from './components/NewIncidentMap.jsx';
 import { Location } from './components/Location.jsx';
+import { MainIncident } from './components/MainIncident.jsx';
 
 
 
@@ -30,18 +31,22 @@ const router = createBrowserRouter([
       },
       {
         path:'Incidents',
+        element:<MainIncident/>,
+      },
+      {
+        path:'Incidents/IncidentRule',
         element:<Incidents/>,
       },
       {
-        path:'Incidents/incidentDetails',
+        path:'Incidents/IncidentRule/incidentDetails',
         element:<IncidentsDetails/>
       },
       {
-        path:'Incidents/incidentDetails/Descirbe',
+        path:'Incidents/IncidentRule/incidentDetails/Descirbe',
         element:<NewIncidentDescirbe/>
       },
       {
-        path:'Incidents/incidentDetails/Descirbe/mapdetails',
+        path:'Incidents/IncidentRule/incidentDetails/Descirbe/mapdetails',
         element:<NewIncidentMap/>
       },
     

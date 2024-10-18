@@ -63,7 +63,7 @@ export const Header = ({ navlist }) => {
           <FontAwesomeIcon onClick={() => setNav(!navGet)} icon={faBars} />
           </div>
         </nav>
-        <div className="border border-black/5 mt-3 sm:mt-7 mb-9"></div>
+        <div className="border border-black/5 mt-3 sm:mt-4 mb-4 sm:mb-8"></div>
      
       </header>
         

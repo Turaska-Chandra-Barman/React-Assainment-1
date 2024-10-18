@@ -45,7 +45,7 @@ import { Link, Outlet, useOutletContext } from 'react-router-dom';
 
                     return <div className={`w-[235px]  flex  `} style={{placeSelf:'stretch'}} key={items.id}>
                         <div className={`bg-border-bg px-5 py-6 rounded-md `}>
-                            <img className='mb-16' src={items.img} alt="inLogo" />
+                            <img className='mb-16' src={'/'+ items.img} alt="inLogo" />
                             <h1 className='text-xl text-primary font-bold mb-5'>{items.que}</h1>
                             <p className='text-secondary text-xs font-normal'>{items.ans}</p>
                         </div>

@@ -41,9 +41,9 @@ export const Location = () => {
             </div>
           </div>
             <div className='flex items-center gap-3 flex-wrap justify-center'>
-              <Input className=' w-[150px] sm:w-auto text-[8px] sm:text-xs'/>
-              <Filter className=' w-[150px] sm:w-auto text-[8px] sm:text-xs'/>
-              <Button className='flex items-center justify-center sm:justify-normal max-w-[300px] w-full py-2 px-6 sm:w-auto '>
+              <Input className=' w-full sm:w-auto text-[8px] sm:text-xs'/>
+              <Filter className=' w-full sm:w-auto text-[8px] sm:text-xs'/>
+              <Button className='flex items-center justify-center sm:justify-normal  w-full py-2 px-6 sm:w-auto '>
                   <img src="/img/addingButton.png" alt="button" />
                   <h1>New Incident</h1>
               </Button>
@@ -57,13 +57,13 @@ export const Location = () => {
             {
               array.map((item,i) => {
 
-               return <div key={item.id} className='flex items-center gap-4 mb-10 '>
+               return <div key={item.id} className='flex items-center gap-4 mb-5 sm:mb-10 '>
                   <div className='size-9 rounded-full bg-[#F2F2F3] flex items-center justify-center '>
                   <img  src={item.img} alt="LocationImg" />
                   </div>
                   <div>
-                    <small className='text-secondary font-normal text-sm mb-4 block'>{item.name}</small>
-                    <h1 className=' text-primary font-bold text-xl '>{`${i ===1 ? `${item.pricess}`:`${item.address}`}`}</h1>
+                    <small className='text-secondary font-normal text-sm mb-2 sm:mb-4 block'>{item.name}</small>
+                    <h1 className=' text-primary font-bold text-lg sm:text-xl '>{`${i ===1 ? `${item.pricess}`:`${item.address}`}`}</h1>
                   </div>
                   <div>
     
@@ -73,8 +73,8 @@ export const Location = () => {
             }
             <div className='w-full h-[1px] bg-border-bg'></div>
             <div className='decription'>
-              <h1 className='text-primary font-bold text-sm mt-10'>Decription</h1>
-              <p className='text-secondary text-base font-normal mt-4 mb-10'>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</p>
+              <h1 className='text-primary font-bold text-sm mt-5 sm:mt-10'>Decription</h1>
+              <p className='text-secondary text-sm sm:text-base font-normal mt-4 mb-10'>Lorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werhoLorem ipsum dolar sit general sac mascho werho</p>
             </div>
             <div className='w-full h-[0.8px] bg-border-bg mb-10 '></div>
 
