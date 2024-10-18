@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+    .listStyle{
+        @apply text-sm xl:hover:text-inherit   hover:bg-gradient-to-t  hover:from-[#2e337a] xl:hover:from-inherit hover:to-[#09090a] xl:to-inherit rounded-full hover:text-white w-[120px] xl:w-auto text-center transition delay-100 duration-150 ease-in-out xl:px-0 py-2 xl:py-0 border xl:border-0 border-black
+    }
+    .ulStyle{
+        @apply xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center 
+    }
+}
+
 .active{
     background-color: green;
     padding: 2px 5px;

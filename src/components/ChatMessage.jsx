@@ -3,8 +3,9 @@ import { Button } from './common/Button';
 
 export default function ChatMessage({ chatMessage,getHidden}) {
 
+
   return (
-    <div className={` w-[290px] sm:w-[331px]  bg-mainChat-bg fixed z-50 rounded-t-lg rounded-r-lg top-[32%]  sm:top-[25%] right-[9.5%]`}>
+    <div className={`${!getHidden && 'hidden'}  w-[290px] sm:w-[331px]  bg-mainChat-bg fixed z-50 rounded-t-lg rounded-r-lg top-[32%]  sm:top-[25%] right-[9.5%] `}>
       <div className="bg-accent h-[76px] flex items-center justify-start px-5 rounded-t-lg rounded-r-lg">
         <h1 className="text-lg font-bold text-btn-text w-auto ">Chat with Cypher</h1>
       </div>

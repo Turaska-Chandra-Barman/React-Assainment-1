@@ -12,8 +12,9 @@ import { MainCard } from './MainCard';
 export const CardItem = () => {
   const [{cardlist,chatMessage}] = useOutletContext()
   const [getHidden, setHidden] = useState(false);
-
+  
   return (
+
     <>
       {
         <Search>
@@ -34,10 +35,10 @@ export const CardItem = () => {
           </div>
         </Search>
       }
-     <MainCard/>
-     {getHidden && (
+     <MainCard setHidden={setHidden} getHidden={getHidden}/>
+ 
       <ChatMessage chatMessage={chatMessage} getHidden={getHidden} />
-    )}
+
     {<ChatButton getHidden={getHidden} setHidden={setHidden} />}
     </>
   );

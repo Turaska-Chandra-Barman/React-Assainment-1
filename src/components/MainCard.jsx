@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router-dom';
 import ChatMessage from './ChatMessage';
 import { ChatButton } from './ChatButton';
 
-export const MainCard = () => {
+export const MainCard = ({getHidden,setHidden}) => {
 
 
     const [{cardlist,chatMessage}] = useOutletContext()
@@ -13,9 +13,9 @@ export const MainCard = () => {
 
 
   return (
-    <Container className=" mb-32 mt-23     sm:mt-10  ">
-    <div className=" grid grid-cols-[repeat(auto-fill,minmax(306px,1fr))] overflow-hidden gap-x-6 gap-y-8 justify-items-center">
-      {cardlist.map(({ id, img, logo, logoName, name, prices, text }) => {
+    <Container   className=" mb-32 mt-23 sm:mt-10  ">
+    <div onClick={(e) => setHidden(false)} className=" grid grid-cols-[repeat(auto-fill,minmax(306px,1fr))] overflow-hidden gap-x-6 gap-y-8 justify-items-center">
+      {cardlist.map(({ id, img, logo, logoName, name  , prices, text }) => {
         return (
           <div key={id} className="max-w-[306px]">
             <div className="relative ">

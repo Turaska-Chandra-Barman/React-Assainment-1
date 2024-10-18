@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 export const Header = ({ navlist }) => {
-  console.log('hello  ')
+
 
   const [navGet,setNav] =useState(false)
   return (
@@ -18,26 +18,28 @@ export const Header = ({ navlist }) => {
             src="/img/Logo-header.png"
             alt="sdfs"
           />
-          <ul className={` ${navGet ?'flex':'hidden'}  xl:flex absolute xl:static  w-[250px] xl:w-auto xl:h-auto top-20 sm:top-24 h-[500px] bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit right-0 flex  rounded-t-md rounded-l-md flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
+          <div className={`${navGet && 'fixed xl:static inset-0 bg-zinc-600/90 xl:bg-inherit flex w-full  h-full  items-center justify-center  '}`}>
+          <ul className={` ${navGet ?'flex':'hidden'}  xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
             {navlist.map(({ id, name }) => {
               return (
                 <>
-                  <li
+                  <li 
                     key={id}
                     className={` 
                   ${
                     name === 'Dashboard'
                       ? 'text-primary font-bold  '
                       : ' text-primary font-bold xl:font-normal xl:text-headerText relative'
-                  } text-sm `}
+                  } listStyle xl:hover:bg-inherit`}
                   >
-                    <NavLink to={ '/'+ name}>{name}</NavLink>
+                    <NavLink onClick={() => setNav(false)} to={ '/'+ name}>{name}</NavLink>
                   </li>
                   <span className=" coustom-underline"></span>
                 </>
               );
             })}
           </ul>
+          </div>
           <div className=" flex items-center justify-center gap-1 sm:gap-2">
             <div className=" size-8 sm:size-10 bg-white rounded-full flex items-center justify-center relative">
               <img src="/img/notification.png" alt="notification" />

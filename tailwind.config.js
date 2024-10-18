@@ -37,6 +37,9 @@ export default {
       boxShadow: {
         chatbtn: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
       },
+      backgroundImage: {
+        navGradient: 'linear-gradient(to top, #2e337a, #09090a)',
+      },
     },
   },
   plugins: [],
