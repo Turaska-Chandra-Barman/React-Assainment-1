@@ -1,8 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import { IncidentContainer } from './common/IncidentContainer';
-import { useOutletContext } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 import { Search } from './common/Search';
 import { NewIncident } from './NewIncident';
+import { Button } from './common/Button';
 
 export const IncidentsDetails = () => {
   const [getStyle, setStyle] = useState(null);
@@ -16,7 +17,11 @@ export const IncidentsDetails = () => {
   return (
     <>
       <Search>
-        <NewIncident />
+        <NewIncident>
+        <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
+               <Link to={'Descirbe'}> Next step</Link>
+            </Button>
+        </NewIncident>
       </Search>
       <IncidentContainer>
         <div className='mb-10'>

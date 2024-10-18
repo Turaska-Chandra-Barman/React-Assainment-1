@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button } from './common/Button'
 import { Link } from 'react-router-dom'
 
-export const NewIncident = () => {
+export const NewIncident = ({children}) => {
     const array = ['Home','Incidents','New Incident']
 
 
@@ -48,9 +48,7 @@ export const NewIncident = () => {
            <Button onclick={Back} className='border-2   border-[D4D4D8] px-7 py-2 sm:px-14 sm:py-4  bg-white text-secondary font-bold text-xs'>
                 Back
             </Button>
-            <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
-               <Link to={'Descirbe'}> Next step</Link>
-            </Button>
+           {children}
            </div>
         </div>
     </>

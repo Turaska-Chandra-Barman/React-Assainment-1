@@ -8,6 +8,7 @@ import { ErrorPage } from './components/ErrorPage.jsx';
 import { Incidents } from './components/Incidents.jsx';
 import { IncidentsDetails } from './components/IncidentsDetails.jsx';
 import { NewIncidentDescirbe } from './components/NewIncidentDescirbe.jsx';
+import { NewIncidentMap } from './components/NewIncidentMap.jsx';
 
 
 
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
         path:'Incidents/incidentDetails/Descirbe',
         element:<NewIncidentDescirbe/>
       },
+      {
+        path:'Incidents/incidentDetails/Descirbe/mapdetails',
+        element:<NewIncidentMap/>
+      },
+    
       {
         path:'Locations',
         element:<h1>this is a Locations</h1>

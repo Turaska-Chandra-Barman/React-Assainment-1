@@ -2,6 +2,8 @@ import React from 'react';
 import { Search } from './common/Search';
 import { NewIncident } from './NewIncident';
 import { IncidentContainer } from './common/IncidentContainer';
+import { Button } from './common/Button';
+import { Link } from 'react-router-dom';
 
 export const NewIncidentDescirbe = () => {
   const array = [
@@ -22,7 +24,11 @@ export const NewIncidentDescirbe = () => {
   return (
     <>
       <Search>
-        <NewIncident />
+        <NewIncident>
+        <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
+               <Link to={'mapdetails'}> Next step</Link>
+            </Button>
+        </NewIncident>
       </Search>
       <IncidentContainer>
         <div>
