@@ -49,6 +49,10 @@ const router = createBrowserRouter([
         path:'Incidents/IncidentRule/incidentDetails/Descirbe/mapdetails',
         element:<NewIncidentMap/>
       },
+      {
+        path:'Incidents',
+        element:<Incidents/>
+      },
     
       {
         path:'Locations',
