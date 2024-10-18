@@ -9,12 +9,17 @@
     .ulStyle{
         @apply xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center 
     }
+
 }
 
 .active{
-    background-color: green;
-    padding: 2px 5px;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 33px;
+    text-decoration-color:black ;
+    @apply no-underline xl:underline
 }
+
 
 .CardDetails{
     background-color:  #F26922;

@@ -2,7 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { Search } from '../common/Search';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 
 export const Header = ({ navlist }) => {
@@ -18,13 +18,13 @@ export const Header = ({ navlist }) => {
             src="/img/Logo-header.png"
             alt="sdfs"
           />
-          <div className={`${navGet && 'fixed xl:static inset-0 bg-zinc-600/90 xl:bg-inherit flex w-full  h-full  items-center justify-center  '}`}>
-          <ul className={` ${navGet ?'flex':'hidden'}  xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
+          <div onClick={() => setNav(false)} className={`${navGet && 'fixed xl:static inset-0 bg-zinc-600/90 xl:bg-inherit flex w-full  h-full  items-center justify-center  '}`}>
+          <ul onClick={(e) => e.stopPropagation()} className={` ${navGet ?'flex':'hidden'}  xl:flex w-[500px]  h-[500px] xl:static  rounded-lg xl:w-auto xl:h-auto  bg-gradient-to-r from-[#E0EAFC] to-[#CFDEF3] xl:bg-gradient-to-t xl:from-inherit xl:to-inherit  flex  flex-col xl:flex-row gap-3  xl:gap-9 items-center justify-center  `}>
             {navlist.map(({ id, name }) => {
               return (
-                <>
+                <Fragment key={id}>
                   <li 
-                    key={id}
+                    
                     className={` 
                   ${
                     name === 'Dashboard'
@@ -32,17 +32,19 @@ export const Header = ({ navlist }) => {
                       : ' text-primary font-bold xl:font-normal xl:text-headerText relative'
                   } listStyle xl:hover:bg-inherit`}
                   >
-                    <NavLink onClick={() => setNav(false)} to={ '/'+ name}>{name}</NavLink>
+                    <NavLink onClick={(e) => {
+                      setNav(false)
+                    }} to={ '/'+ name}>{name}</NavLink>
                   </li>
                   <span className=" coustom-underline"></span>
-                </>
+                </Fragment>
               );
             })}
           </ul>
           </div>
           <div className=" flex items-center justify-center gap-1 sm:gap-2">
-            <div className=" size-8 sm:size-10 bg-white rounded-full flex items-center justify-center relative">
-              <img src="/img/notification.png" alt="notification" />
+            <div className=" -z-[9999] size-8 sm:size-10 bg-white rounded-full flex items-center justify-center relative">
+              <img  src="/img/notification.png" alt="notification" />
               <div className="size-2.5 border border-white bg-accent-secondary  rounded-full absolute top-0 right-0"></div>
             </div>
             <div className="flex items-center justify-center gap-1 sm:gap-2">
