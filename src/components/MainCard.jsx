@@ -27,8 +27,8 @@ export const MainCard = ({ getHidden, setHidden }) => {
                   <h1 className="text-xs font-bold">{logoName}</h1>
                 </div>
               </div>
-              <div className=" mt-5 space-y-4">
-                <h1 className="text-sm font-bold text-primary leading-none">
+              <div className=" mt-2 sm:mt-5 space-y-2 sm:space-y-4">
+                <h1 className="text-lg sm:text-xs font-bold text-primary leading-none">
                   {name}
                 </h1>
                 <p className="text-sm font-normal text-secondary leading-none">

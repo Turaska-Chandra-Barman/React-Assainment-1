@@ -104,12 +104,12 @@ export const Location = () => {
                 </small>
               </div>
 
-              <div className=" w-full smpro:grid smpro:grid-cols-[repeat(auto-fill,minmax(224px,1fr))] justify-items-center  ">
+              <div className=" w-full  smpro:grid smpro:grid-cols-[repeat(auto-fill,minmax(224px,1fr))] justify-items-center  ">
                 {location.map(({ currency, id, img, name, text }) => {
                   return (
                     <div
                       key={id}
-                      className="smpro:max-w-[224px] w-full relative"
+                      className="smpro:max-w-[224px] mb-6 sm:mb-0 w-full relative"
                     >
                       <img
                         src={img}
@@ -122,10 +122,10 @@ export const Location = () => {
                           Building
                         </h1>
                       </div>
-                      <h1 className="text-primary font-bold text-sm mb-2.5 mt-3  leading-none">
+                      <h1 className="text-primary font-bold text-lg sm:text-sm mb-1.5 sm:mb-2.5 mt-3  leading-none">
                         {name}
                       </h1>
-                      <p className="text-secondary text-xs font-normal mb-2.5">
+                      <p className="text-secondary text-xs font-normal mb-1.5 sm:mb-2.5">
                         {text}
                       </p>
                       <span className="text-primary font-bold text-sm ">
@@ -161,7 +161,7 @@ export const Location = () => {
                           <h1 className="text-primary text-sm font-bold">
                             {headername}
                           </h1>
-                          <span className="text-secondary text-sm font-normal">
+                          <span className="text-primary text-sm font-normal">
                             {headernext}
                           </span>
                         </div>

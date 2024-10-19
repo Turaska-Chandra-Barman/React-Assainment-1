@@ -29,14 +29,14 @@ export const CardItem = () => {
                 Dashboard
               </h1>
             </div>
-            <div className="flex items-center  flex-wrap  gap-3">
+            <div className="flex items-center justify-center sm:justify-start  flex-wrap  gap-3">
               <Input className="w-full sm:w-auto" />
               <Filter className="w-full sm:w-auto" />
 
               <Link to="/Incidents">
                 {' '}
                 {
-                  <Button className="w-full sm:w-auto px-6 place-self-stretch">
+                  <Button className="w-full sm:w-auto px-6 flex  place-self-stretch">
                     Cypher AI
                   </Button>
                 }
