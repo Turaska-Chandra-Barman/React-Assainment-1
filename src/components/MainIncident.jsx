@@ -20,12 +20,15 @@ export const MainIncident = () => {
         <div className='flex items-center gap-3 flex-wrap justify-center'>
           <Input className=' w-full sm:w-auto text-[8px] sm:text-xs'/>
           <Filter className=' w-full sm:w-auto text-[8px] sm:text-xs'/>
+            <Link  to='IncidentRule' >
           <Button className=' w-full py-2 px-6 sm:w-auto '>
-            <Link  to='IncidentRule' className='flex items-center justify-center sm:justify-normal'>
+            <div className='flex items-center justify-center sm:justify-normal'>
             <img src="/img/addingButton.png" alt="button" />
             <h1>New Incident</h1>
-            </Link>
+
+            </div>
           </Button>
+            </Link>
         </div>
     </div>
   </Search> 

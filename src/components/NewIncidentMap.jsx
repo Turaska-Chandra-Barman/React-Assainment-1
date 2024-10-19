@@ -10,9 +10,12 @@ export const NewIncidentMap = () => {
     <>
     <Search>
     <NewIncident>
-    <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
-               <Link to={'/'}> Finished</Link>
-            </Button>
+  
+               <Link to={'/Locations'}>
+               <Button className=' px-5 py-2 sm:px-10 sm:py-4 text-white  font-bold text-xs'>
+               Finished
+               </Button>
+                </Link>
     </NewIncident>
   </Search>
   <IncidentContainer>
@@ -32,10 +35,6 @@ export const NewIncidentMap = () => {
                     <img src="/img/search.png" alt="search"  />
                     <input type="text" className='w-full bg-inherit  text-secondary focus:outline-none text-xs font-normal' placeholder='Pinpoint damage' />
                 </div>
-                {/* <div className='flex items-center'>
-                    <img src="/img/search.png" alt="search" />
-                    <input type="text" placeholder='Pinpoint damage' />
-                </div> */}
             </div>
         </div>
     </div>

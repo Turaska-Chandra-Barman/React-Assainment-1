@@ -10,11 +10,10 @@ import { Link, useOutletContext } from 'react-router-dom';
 import { MainCard } from './MainCard';
 
 export const CardItem = () => {
-  const [{cardlist,chatMessage}] = useOutletContext()
+  const [{ cardlist, chatMessage }] = useOutletContext();
   const [getHidden, setHidden] = useState(false);
-  
-  return (
 
+  return (
     <>
       {
         <Search>
@@ -28,20 +27,24 @@ export const CardItem = () => {
               </h1>
             </div>
             <div className="flex items-center  flex-wrap  gap-3">
-              <Input className='w-full sm:w-auto'/>
-             <Filter className='w-full sm:w-auto'/>
-              {<Button className='w-full sm:w-auto px-6 place-self-stretch'>
-                <Link to='/Incidents'>Cypher AI</Link>
-                </Button>}
+              <Input className="w-full sm:w-auto" />
+              <Filter className="w-full sm:w-auto" />
+
+              <Link to="/Incidents">
+                {' '}
+                {
+                  <Button className="w-full sm:w-auto px-6 place-self-stretch">Cypher AI</Button>
+                }
+              </Link>
             </div>
           </div>
         </Search>
       }
-     <MainCard setHidden={setHidden} getHidden={getHidden}/>
- 
+      <MainCard setHidden={setHidden} getHidden={getHidden} />
+
       <ChatMessage chatMessage={chatMessage} getHidden={getHidden} />
 
-    {<ChatButton getHidden={getHidden} setHidden={setHidden} />}
+      {<ChatButton getHidden={getHidden} setHidden={setHidden} />}
     </>
   );
 };
