@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Button } from './common/Button';
 import { Link, useOutletContext } from 'react-router-dom';
-import { NewIncident } from './NewIncident';
 import { Search } from './common/Search';
 import { Input } from './common/input';
 import { Filter } from './common/Filter';
@@ -9,7 +8,6 @@ import { Container } from './common/container';
 
 export const Location = () => {
   const [{ location, locationListing }] = useOutletContext();
-  console.log(locationListing);
 
   const array = [
     {
@@ -46,8 +44,8 @@ export const Location = () => {
             </div>
           </div>
           <div className="flex items-center gap-3 flex-wrap justify-center">
-            <Input className=" w-full sm:w-auto text-[8px] sm:text-xs" />
-            <Filter className=" w-full sm:w-auto text-[8px] sm:text-xs" />
+            <Input className=" w-full sm:w-auto  sm:text-xs" />
+            <Filter className=" w-full sm:w-auto sm:text-xs" />
             <Link to="/Incidents">
               <Button className=" w-full py-2 px-6 sm:w-auto ">
                 <div className="flex items-center justify-center sm:justify-normal ">
@@ -109,8 +107,15 @@ export const Location = () => {
               <div className=" w-full smpro:grid smpro:grid-cols-[repeat(auto-fill,minmax(224px,1fr))] justify-items-center  ">
                 {location.map(({ currency, id, img, name, text }) => {
                   return (
-                    <div key={id} className="smpro:max-w-[224px] w-full relative">
-                      <img src={img} className='w-full smpro:w-auto' alt="locationCardimg" />
+                    <div
+                      key={id}
+                      className="smpro:max-w-[224px] w-full relative"
+                    >
+                      <img
+                        src={img}
+                        className="w-full smpro:w-auto"
+                        alt="locationCardimg"
+                      />
                       <div className=" absolute top-2 right-4 gap-1 flex items-center p-2 bg-white rounded-full">
                         <img src="/img/Locationcardlogo.png" alt="logo" />
                         <h1 className="text-[10px] font-bold text-primary">
@@ -129,16 +134,6 @@ export const Location = () => {
                     </div>
                   );
                 })}
-                {/* <div className='max-w-[224px] w-full relative'>
-                      <img src="/img/location-img-01.png" alt="" />
-                      <div  className=' absolute top-2 right-4 gap-1 flex items-center p-2 bg-white rounded-full'>
-                        <img src="/img/Locationcardlogo.png" alt="logo" />
-                        <h1 className='text-[10px] font-bold text-primary'>Building</h1>
-                      </div>
-                      <h1 className='text-primary font-bold text-sm mb-2.5 mt-3  leading-none'>Whitechapel Rd.</h1>
-                      <p className='text-secondary text-xs font-normal mb-2.5'>Tulare County,  Los Angles, CA 23415</p>
-                      <span className='text-primary font-bold text-sm '>$1,456,654.00</span>
-                    </div>  */}
               </div>
             </div>
             <div className="w-full h-[0.8px] bg-border-bg mb-10  mt-10"></div>

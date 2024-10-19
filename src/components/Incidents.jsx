@@ -61,9 +61,9 @@ export const Incidents = () => {
         </div>
         <div className="w-full text-center">
           <Link to="incidentDetails">
-          <Button className="  mt-10 sm:mt-20 text-center w-[139px]  ">
-            Get started
-          </Button>
+            <Button className="  mt-10 sm:mt-20 text-center w-[139px]  ">
+              Get started
+            </Button>
           </Link>
         </div>
       </Container>

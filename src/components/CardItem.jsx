@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Container } from './common/container';
 import { ChatButton } from './ChatButton';
 import ChatMessage from './ChatMessage';
 import { Search } from './common/Search';
@@ -17,7 +16,11 @@ export const CardItem = () => {
     <>
       {
         <Search>
-          <div className="flex items-center justify-center sm:justify-between gap-y-2 gap-x-20 flex-wrap ">
+          <div
+            initial={{ x: 200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="flex items-center justify-center sm:justify-between gap-y-2 gap-x-20 flex-wrap "
+          >
             <div className="place-self-start sm:place-self-auto">
               <small className="text-xs text-secondary font-normal">
                 Wellcome back
@@ -33,7 +36,9 @@ export const CardItem = () => {
               <Link to="/Incidents">
                 {' '}
                 {
-                  <Button className="w-full sm:w-auto px-6 place-self-stretch">Cypher AI</Button>
+                  <Button className="w-full sm:w-auto px-6 place-self-stretch">
+                    Cypher AI
+                  </Button>
                 }
               </Link>
             </div>

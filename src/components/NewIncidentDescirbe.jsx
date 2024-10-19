@@ -61,7 +61,6 @@ export const NewIncidentDescirbe = () => {
               </Fragment>
             );
           })}
-
         </div>
       </IncidentContainer>
     </>

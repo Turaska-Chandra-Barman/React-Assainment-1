@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import Data from '../lib/Json.js'
-import { CardItem } from './CardItem.jsx'
-import { useRouteError } from 'react-router-dom';
+import React, { useState } from 'react';
+import Data from '../lib/Json.js';
+import { CardItem } from './CardItem.jsx';
+import { useOutletContext } from 'react-router-dom';
+
 
 export const MainContainer = () => {
 
-    const [getData, setData] = useState(Data);
-  const { navlist, cardlist, incidents, newIncidents,  chatMessage } = getData[0];
+  const [{cardlist,chatMessage}] = useOutletContext()
   return (
-            <>
-                <CardItem cardlist={cardlist} chatMessage={chatMessage} />
-           
-            </>
-  )
-}
+    <>
+      <CardItem cardlist={cardlist} chatMessage={chatMessage} />
+    </>
+  );
+};

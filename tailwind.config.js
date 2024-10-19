@@ -6,6 +6,7 @@ export default {
       screens:{
         smpro:'520px'
       },
+
       colors: {
         primary: '#09090B',
         secondary: '#71717A',
@@ -15,6 +16,7 @@ export default {
       },
       backgroundColor: {
         'header-color': ' #E4E4E780',
+        'header-secondary':'#F2F2F3',
         'accent-secondary': ' #4ADE80',
         'chat-bg': ' #3F3F46',
         'mainChat-bg': '#F4F4F5',
